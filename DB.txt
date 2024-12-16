@@ -1,0 +1,58 @@
+## Database Design
+
+1. **Users**
+   - **Attributes**:
+     - `user_id` (Primary Key, UUID)
+     - `username` (Unique, String)
+     - `email` (Unique, String)
+     - `password_hash` (String)
+     - `bio` (Text)
+     - `profile_picture` (String, URL)
+     - `created_at` (Timestamp)
+     - `updated_at` (Timestamp)
+
+2. **Threads**
+   - **Attributes**:
+     - `thread_id` (Primary Key, UUID)
+     - `user_id` (Foreign Key referencing Users)
+     - `content` (Text)
+     - `image_url` (String, URL, optional)
+     - `created_at` (Timestamp)
+     - `updated_at` (Timestamp)
+
+3. **Comments**
+   - **Attributes**:
+     - `comment_id` (Primary Key, UUID)
+     - `thread_id` (Foreign Key referencing Threads)
+     - `user_id` (Foreign Key referencing Users)
+     - `content` (Text)
+     - `created_at` (Timestamp)
+
+4. **Likes**
+   - **Attributes**:
+     - `like_id` (Primary Key, UUID)
+     - `thread_id` (Foreign Key referencing Threads)
+     - `user_id` (Foreign Key referencing Users)
+     - `created_at` (Timestamp)
+
+5. **Follows**
+   - **Attributes**:
+     - `follower_id` (Foreign Key referencing Users)
+     - `followed_id` (Foreign Key referencing Users)
+     - Primary Key (`follower_id`, `followed_id`) to ensure uniqueness
+
+6. **Notifications**
+   - **Attributes**:
+     - `notification_id` (Primary Key, UUID)
+     - `user_id` (Foreign Key referencing Users)
+     - `type` (String: e.g., "like", "comment", "follow")
+     - `source_user_id` (Foreign Key referencing Users who performed the action)
+     - `thread_id` (Foreign Key referencing Threads, optional for likes/comments)
+     - `is_read` (Boolean)
+     - `created_at` (Timestamp)
+
+## Relationships
+    - A user can create multiple threads.
+    - A thread can have multiple comments and likes.
+    - A user can follow multiple users and be followed by multiple users.
+  - Notifications are linked to actions performed by users on threads or other users.
