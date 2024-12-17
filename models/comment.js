@@ -26,13 +26,13 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.TEXT,
         allowNull: false,
       },
-      created_at: DataTypes.DATE,
+      createdAt: DataTypes.DATE,
     },
     {
       sequelize,
       modelName: "Comment",
       timestamps: false,
-      underscored: true,
+      underscored: false,
     }
   );
   return Comment;

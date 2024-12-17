@@ -37,14 +37,12 @@ module.exports = (sequelize, DataTypes) => {
       password_hash: DataTypes.STRING,
       bio: DataTypes.TEXT,
       profile_picture: DataTypes.STRING,
-      created_at: DataTypes.DATE,
-      updated_at: DataTypes.DATE
     },
     {
       sequelize,
       modelName: "User",
       timestamps: true,  // Enables createdAt and updatedAt
-      underscored: true, // Use snake_case for column names (created_at, updated_at)
+      underscored: false, // Use snake_case for column names (created_at, updated_at)
     }
   );
   return User;

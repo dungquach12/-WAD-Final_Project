@@ -29,7 +29,7 @@ module.exports = (sequelize, DataTypes) => {
       sequelize,
       modelName: "Thread",
       timestamps: true,
-      underscored: true,
+      underscored: false,
     }
   );
   return Thread;

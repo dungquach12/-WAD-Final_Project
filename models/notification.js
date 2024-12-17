@@ -32,13 +32,13 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.BOOLEAN,
         defaultValue: false,
       },
-      created_at: DataTypes.DATE,
+      createdAt: DataTypes.DATE,
     },
     {
       sequelize,
       modelName: "Notification",
       timestamps: false,
-      underscored: true,
+      underscored: false,
     }
   );
   return Notification;

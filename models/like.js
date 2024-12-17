@@ -22,13 +22,13 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.UUID,
         allowNull: false,
       },
-      created_at: DataTypes.DATE,
+      createdAt: DataTypes.DATE,
     },
     {
       sequelize,
       modelName: "Like",
       timestamps: false,
-      underscored: true,
+      underscored: false,
     }
   );
   return Like;
