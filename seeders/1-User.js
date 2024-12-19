@@ -13,7 +13,7 @@ module.exports = {
         email: "john@example.com",
         password_hash: await bcrypt.hash("password123", 10),
         bio: "Software Developer",
-        profile_picture: "https://example.com/profile1.jpg",
+        profile_picture: "https://api.dicebear.com/9.x/adventurer/svg?seed=Caleb",
       },
       {
         user_id: "e7fc2cc9-95d6-47b0-9d78-aad54dffacf9",
@@ -21,7 +21,7 @@ module.exports = {
         email: "jane@example.com",
         password_hash: await bcrypt.hash("password123", 10),
         bio: "Graphic Designer",
-        profile_picture: "https://example.com/profile2.jpg",
+        profile_picture: "https://api.dicebear.com/9.x/adventurer/svg?seed=Aiden",
       },
       {
         user_id: "4818ef51-9199-414b-83ea-e22cd8551619",
@@ -29,7 +29,7 @@ module.exports = {
         email: "mike@example.com",
         password_hash: await bcrypt.hash("password123", 10),
         bio: "Freelance Writer",
-        profile_picture: "https://example.com/profile3.jpg",
+        profile_picture: "https://api.dicebear.com/9.x/adventurer/svg?seed=Eden",
       },
       {
         user_id: "6bed75ab-dd16-4342-aa14-8a4bce94879c",
@@ -37,7 +37,7 @@ module.exports = {
         email: "susan@example.com",
         password_hash: await bcrypt.hash("password123", 10),
         bio: "Marketing Specialist",
-        profile_picture: "https://example.com/profile4.jpg",
+        profile_picture: "https://api.dicebear.com/9.x/adventurer/svg?seed=Jude",
       },
       {
         user_id: "5c8f9e29-a92e-4cdb-bd82-2ab387bb2306",
@@ -45,7 +45,7 @@ module.exports = {
         email: "peter@example.com",
         password_hash: await bcrypt.hash("password123", 10),
         bio: "Data Scientist",
-        profile_picture: "https://example.com/profile5.jpg",
+        profile_picture: "https://api.dicebear.com/9.x/adventurer/svg?seed=Jocelyn",
       },
     ];
 

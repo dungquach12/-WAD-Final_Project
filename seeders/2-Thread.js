@@ -16,7 +16,7 @@ module.exports = {
         thread_id: "a6111a0b-9484-44be-8ce3-fa02750e65b4",
         user_id: "92a234c7-fb37-43d7-a4d1-050e52039f1b",
         content: "Does anyone know good design resources?",
-        image_url: "https://example.com/image1.jpg",
+        image_url: "https://i.imgur.com/anHtrv7.jpeg",
       },
       {
         thread_id: "c1bc19cf-0dd9-4417-acc2-07a99b3140f7",
@@ -28,7 +28,7 @@ module.exports = {
         thread_id: "155dcff7-2070-48f0-8304-a514672e5708",
         user_id: "e7fc2cc9-95d6-47b0-9d78-aad54dffacf9",
         content: "Looking for advice on marketing strategies.",
-        image_url: "https://example.com/image2.jpg",
+        image_url: "https://i.imgur.com/Oz59RZM.jpeg",
       },
       {
         thread_id: "305c3c3a-4034-4509-817c-0269919e5d92",
