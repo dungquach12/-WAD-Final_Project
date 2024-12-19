@@ -25,13 +25,7 @@ app.set("view engine", "hbs");
 
 // Routes
 // YOUR CODE HERE
-app.get("/", (req, res) =>
-    res.redirect("/thread"),
-);
-
-app.get("/thread", (req, res) =>
-    res.render("thread")
-);
+app.use("/profile", require("./routes/profileRouter"));
 
 app.listen(port, () =>
      console.log(`Example app listening on port ${port}`)
