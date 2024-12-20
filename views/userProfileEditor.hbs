@@ -1,0 +1,92 @@
+{{#with userData}}
+  <!-- Top bar -->
+  <form id="editProfileForm" action="" method="POST">
+    <nav class="navbar mt-1 row">
+      <a
+        class="btn btn-sm col-4"
+        type="button"
+        role="button"
+        href="/profile/{{username}}"
+      >
+        Cancel
+      </a>
+      <span class="col-4 text-center">Edit Profile</span>
+      <button
+        class="btn btn-sm text-primary col-4"
+        type="submit"
+        form="editProfileForm"
+      >
+        Done
+      </button>
+    </nav>
+
+    <!-- Hidden field for user_id -->
+    <input type="hidden" id="user_id" name="user_id" value="{{user_id}}" />
+    <!-- Profile photo -->
+    <div class="container mt-3">
+      <div class="row justify-content-center">
+        <img
+          class="rounded-circle"
+          src="{{profile_picture}}"
+          alt="profile_image"
+          style="max-width: 45%;"
+        />
+      </div>
+      <div class="row justify-content-center">
+        <button class="btn btn-sm text-primary" type="button" role="button">
+          Change Profile Photo
+        </button>
+      </div>
+    </div>
+
+    <!-- Line separator -->
+    <hr class="m-3" style="border: 1px solid black;" />
+
+    <!-- Form for editing user information -->
+    <!-- Username -->
+    <div class="container">
+      <div class="row mb-3">
+        <label class="col-4" for="username">Username</label>
+        <div class="col-8">
+          <input
+            type="text"
+            id="username"
+            name="username"
+            class="form-control"
+            value="{{username}}"
+            required
+          />
+        </div>
+      </div>
+
+      <!-- Bio -->
+      <div class="row mb-3">
+        <label class="col-4" for="bio">Bio</label>
+        <div class="col-8">
+          <textarea
+            id="bio"
+            name="bio"
+            class="form-control"
+            rows="3"
+            required
+          >{{bio}}</textarea>
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="row mb-3">
+        <label class="col-4" for="email">Email</label>
+        <div class="col-8">
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="form-control"
+            value="{{email}}"
+            required
+          />
+        </div>
+      </div>
+    </div>
+  </form>
+{{/with}}
