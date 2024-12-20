@@ -18,6 +18,13 @@ app.engine('hbs', expressHbs.engine({
     },
     helpers: {
         createPagination,
+        formatDate: (date) => {
+            return date.toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "numeric",
+              day: "numeric",
+            });
+        },
     }
 }));
 
@@ -25,6 +32,9 @@ app.set("view engine", "hbs");
 
 // Routes
 // YOUR CODE HERE
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
 app.use("/profile", require("./routes/profileRouter"));
 
 app.listen(port, () =>

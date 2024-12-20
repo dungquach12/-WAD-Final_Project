@@ -67,7 +67,7 @@
   <!-- Edit button -->
   <div class="pb-3">
     <a
-      href="profile_editor.html"
+      href="/profile/{{username}}/edit/"
       class="btn w-100 py-1"
       style="text-align: center; border: 2px solid lightgray;"
     >
@@ -98,7 +98,7 @@
         <span
           class="h10 text-muted"
           style="margin-left: -10px; font-family: 'Calibri', sans-serif"
-        >{{createdAt}}</span>
+        >{{formatDate createdAt}}</span>
       </div>
     </div>
 
